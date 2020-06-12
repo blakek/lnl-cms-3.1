@@ -1,0 +1,82 @@
+import * as themeSettings from "@mdx-deck/themes";
+import {
+  Appear,
+  FullScreenCode,
+  Head,
+  Horizontal,
+  Invert,
+  Image,
+  Notes,
+  Split,
+  SplitRight
+} from "mdx-deck";
+
+export const theme = themeSettings.future;
+
+<!-- Blank slide -->
+
+---
+
+# CMS Setup v3
+
+> 🚧 a work-in-progress
+
+---
+
+# The Problem
+
+- wide variety of project types
+- low-budget sites have too much technical debt
+- higher-budget sites spend too long on setup
+- improvements aren't shared between projects
+
+---
+
+# Goals
+
+- share improvements when it makes sense
+- make setup a faster
+- spend more of budget on what matters
+
+---
+
+# Past Setup - v1.0
+
+✅ little setup<br />
+❌ siloed knowledge<br />
+❌ technical debt
+
+---
+
+# Current Setup - v2.0
+
+✅ fewer silos<br />
+❌ more setup time<br />
+❌ sometimes over-engineered
+
+---
+
+# Next Setup - v3.0
+
+✅ reduced setup<br />
+✅ fewer silos<br />
+🤷‍♂ complicated parts are shared
+
+---
+
+# Technical Changes
+
+- server-side rendering is separate project
+- CMS connection is separate project
+- allow front-end to request what it needs
+- **WIP:** single domain again (no `webapi.server.com`)
+- **WIP:** easily test against different environments
+- **WIP:** create new setup with oneliner
+
+---
+
+import NewPackages from "./new-packages";
+
+# New Packages
+
+<NewPackages />
