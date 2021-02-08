@@ -1,46 +1,24 @@
-import * as themeSettings from "@mdx-deck/themes";
-import {
-  Appear,
-  FullScreenCode,
-  Head,
-  Horizontal,
-  Invert,
-  Image,
-  Notes,
-  Split,
-  SplitRight
-} from "mdx-deck";
+import * as mdxThemes from 'mdx-deck/themes'
 
-export const theme = themeSettings.future;
+export const theme = mdxThemes.dark;
 
-<!-- Blank slide -->
+# CMS Sites v3.1
 
 ---
 
-# CMS Setup v3
+## NOTE
 
-> 🚧 a work-in-progress
-
----
-
-# The Problem
-
-- wide variety of project types
-- low-budget sites have too much technical debt
-- higher-budget sites spend too long on setup
-- improvements aren't shared between projects
+This should change over time like any other project.
 
 ---
 
-# Goals
+## CHANGELOG
 
-- share improvements when it makes sense
-- make setup a faster
-- spend more of budget on what matters
+…how did we get here?
 
 ---
 
-# Past Setup - v1.0
+### v1.0 - vanilla CMS
 
 ✅ little setup<br />
 ❌ siloed knowledge<br />
@@ -48,35 +26,83 @@ export const theme = themeSettings.future;
 
 ---
 
-# Current Setup - v2.0
+### v2.0 - Salata
 
-✅ fewer silos<br />
+🟡 somewhat fewer silos<br />
 ❌ more setup time<br />
-❌ sometimes over-engineered
+❌ difficult to share improvements between projects
 
 ---
 
-# Next Setup - v3.0
+### v3.0 - EurekaMDF
 
 ✅ reduced setup<br />
 ✅ fewer silos<br />
-🤷‍♂ complicated parts are shared
+🟡 complicated parts extracted<br />
+❌ definitely some misses
 
 ---
 
-# Technical Changes
+### v3.1 - WIP
 
-- server-side rendering is separate project
-- CMS connection is separate project
-- allow front-end to request what it needs
-- **WIP:** single domain again (no `webapi.server.com`)
-- **WIP:** easily test against different environments
-- **WIP:** create new setup with oneliner
+✅ reduced setup<br />
+✅ fewer silos<br />
+✅ fewer complicated parts in project<br />
+✅ _slightly_ more flexible page layouts<br />
+🤷‍♂ theme props<br />
+❌ still more needed
 
 ---
 
-import NewPackages from "./new-packages";
+### Technical Changes - v2.0..v3.0
 
-# New Packages
+- server-side rendering
+  - per-project => Next.js
+- CMS connection
+  - per-project => separate GS&F project
+- project setup
+  - per-project => separate GS&F project
+- page props
+  - mostly combined => each page requests own props
+- domains
+  - multiple => single domain (no `webapi.example.com`)
+- test different environments
+  - difficult => command-based (`yarn start:prod`)
 
-<NewPackages />
+---
+
+### Technical Changes - v3.0..v3.1
+
+- CMS connection
+  - GS&F project => [WPGraphQL](https://www.wpgraphql.com/)
+- tweaks to page structure in CMS
+- WIP - remove plugins.json
+- WIP - use Next.js to cache page data
+
+---
+
+## Potential Improvements
+
+- better forms
+- more flexible layouts
+- test selective WP plugin integration
+- test with some WP plugins (e.g. WooCommerce)
+- maybe move base theme to separate project
+- improve experience adding custom plugins to projects
+
+---
+
+## Example CMS layouts
+
+- [EurekaMDF Home](https://dev.eurekamdf.com/wp-admin/post.php?post=281&action=edit)
+- [MCGP About](https://dev-mcgp.gsandfdev.com/wp-admin/post.php?post=137&action=edit)
+
+---
+
+Example Section
+
+This is an example section to show the v3.1 CMS integration. The layout should be fairly flexible to create informational page. In it, you should find that:
+<ul>
+ 	<li>HTML should be allowed</li>
+ 	<li><a href="https://ddg.gg" target="_blank" rel="noopener">External links</a> should work properly</li>
+</ul>

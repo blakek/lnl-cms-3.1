@@ -5,7 +5,7 @@
   "author": "GS&F Devs <mindreactor@gsandf.com> (https://gsandf.com/)",
   "license": "MIT",
   "devDependencies": {
-    "mdx-deck": "^4.1.1",
+    "mdx-deck": "3",
     "serve": "^11.3.2"
   },
   "scripts": {
